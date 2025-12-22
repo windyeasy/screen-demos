@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+import { demosInfo } from './data'
 </script>
 
 <template>
@@ -8,13 +8,15 @@
       Screen Demos
     </header>
     <main class="mt-20px flex flex-wrap justify-center">
-      <template v-for="item in 5" :key="item">
-        <div class="demo-item w-400px box-border cursor-pointer">
-          <div class="item-cover w-full h-340px">
-            <img class="item-cover-img w-100% h-100%" src="" alt="">
-          </div>
-          <div class="item-title text-center font-bold lh-18 text-xl">
-            demo{{ item }}
+      <template v-for="(item, index) in demosInfo" :key="index">
+        <div class="demo-item mb4 p2  w-300px box-border cursor-pointer">
+          <div class="demo-item-wrap shadow-lg rounded-lg overflow-hidden">
+            <div class="item-cover w-full h-240px">
+              <img class="item-cover-img w-100% h-100%" :src="item.cover" :alt="item.title">
+            </div>
+            <div class="item-title text-center font-bold lh-18 text-xl">
+              {{ item.title }}
+            </div>
           </div>
         </div>
       </template>
