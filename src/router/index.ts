@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = [
  * @returns 加入demos的路由列表
  */
 function loadDemosRoutes(routes: RouteRecordRaw[]) {
-  const modules = import.meta.glob<any>('@/views/demos/**/*.vue')
+  const modules = import.meta.glob<any>('@/views/demos/*/*.vue')
   Object.keys(modules).forEach((key: string) => {
     const match = key.match(/\/views\/(demos\/[^/]+)\//)
     if (match) {
