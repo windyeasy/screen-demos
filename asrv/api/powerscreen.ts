@@ -52,7 +52,7 @@ export default defineApiConfig({
         },
       ],
     },
-    chargingStatistics: {
+    exceptionMonitoring: {
       'data|3': [
         {
           'id|+1': 1,
