@@ -26,12 +26,12 @@ export default defineApiConfig({
         {
           'id|+1': 1,
           'name|+1': ['正常', '异常'],
-          'data|9': ['@integer(20, 100)'],
+          'data|12': ['@integer(20, 100)'],
         },
       ],
     },
     chargingStatistics: {
-      'data|12': [
+      'data|7': [
         {
           'id|+1': 1,
           'name|+1': [
