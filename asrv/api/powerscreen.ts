@@ -8,7 +8,14 @@ export default defineApiConfig({
         {
           'id|+1': 1,
           'value': `@integer(1, 100)`,
-          'name': '@ctitle(4)',
+          'name|+1': [
+            '广州占比',
+            '深圳占比',
+            '东莞占比',
+            '佛山占比',
+            '中山占比',
+            '珠海占比',
+          ],
           'percentage': `@integer(1, 100)%`,
           'color|+1': [
             '#34D160',
@@ -67,7 +74,11 @@ export default defineApiConfig({
       'data|3': [
         {
           'id|+1': 1,
-          'title': '@ctitle(3)总数(个)',
+          'title|+1': [
+            '充电桩总数(个)',
+            '年增长总数(个)',
+            '月增长总数(个)',
+          ],
           'totalNum': `@integer(50, 400)`,
           'unit': '万',
           'percentage': `@integer(0, 100)`,
@@ -79,7 +90,13 @@ export default defineApiConfig({
       'data|5': [
         {
           'id|+1': 1,
-          'name': '@city',
+          'name|+1': [
+            '深圳',
+            '广州',
+            '东莞',
+            '佛山',
+            '其它',
+          ],
           'percentage': `@integer(0, 100)%`,
         },
       ],
