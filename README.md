@@ -2,6 +2,8 @@
 
 可视化大屏案例，用于练习大屏代码能力。UI来源于网络，只作为练习使用不做他用。
 
+使用 [asrv](https://windyeasy.github.io/asrv/) 进行接口的模拟
+
 ## 运行项目
 
 使用node 16.0及以上的版本
@@ -16,6 +18,9 @@ pnpm install
 
 ```sh
 pnpm run dev
+
+# 使用 asrv 生成模拟接口
+pnpm run server
 ```
 
 ## 提交方法
