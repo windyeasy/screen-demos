@@ -8,7 +8,7 @@ export default defineApiConfig({
         {
           'id|+1': 1,
           'value': `@integer(1, 100)`,
-          'name': '@ctitle',
+          'name': '@ctitle(4)',
           'percentage': `@integer(1, 100)%`,
           'color|+1': [
             '#34D160',
@@ -31,7 +31,7 @@ export default defineApiConfig({
       ],
     },
     chargingStatistics: {
-      'data|7': [
+      'data|12': [
         {
           'id|+1': 1,
           'name|+1': [
@@ -62,6 +62,28 @@ export default defineApiConfig({
           'begin': '@integer(0,20)s',
         },
       ],
+    },
+    dataAnalysis: {
+      'data|3': [
+        {
+          'id|+1': 1,
+          'title': '@ctitle(3)总数(个)',
+          'totalNum': `@integer(50, 400)`,
+          'unit': '万',
+          'percentage': `@integer(0, 100)`,
+          'isUp': '@boolean',
+        },
+      ],
+    },
+    chargingTop4: {
+      'data|5': [
+        {
+          'id|+1': 1,
+          'name': '@city',
+          'percentage': `@integer(0, 100)%`,
+        },
+      ],
+      'totalPercentage': `@integer(0, 100)`,
     },
   })),
 })
