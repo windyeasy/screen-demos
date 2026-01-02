@@ -37,6 +37,7 @@ export function bigScreenScale(targetWidth = 1920, targetHeight = 1080, targetRa
   }
 
   changeBodyScale()
+  window.dispatchEvent(new Event('resize'))
 
   const throttleChangeBodyScale = throttle(changeBodyScale, 100)
 
