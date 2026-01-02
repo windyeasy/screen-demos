@@ -1,5 +1,5 @@
 import type { EChartsOption } from 'echarts'
-import type { ILineData } from '../../types'
+import type { ILineData } from './types'
 
 export function getLineOption(data: ILineData[]): EChartsOption {
   return {

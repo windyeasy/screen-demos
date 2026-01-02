@@ -17,10 +17,12 @@
     "commit": "cz"
   },
   "dependencies": {
+    "@kjgl77/datav-vue3": "^1.7.4",
     "@vue/reactivity": "^3.5.17",
     "@vue/shared": "^3.5.17",
     "@vueuse/core": "^13.3.0",
     "axios": "^1.10.0",
+    "countup.js": "^2.9.0",
     "echarts": "^6.0.0",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",

@@ -1,5 +1,5 @@
 import type { EChartsOption } from 'echarts'
-import type { IPieData } from '../../types'
+import type { IPieData } from './types'
 
 function getOptionData(data: IPieData[]) {
   return data.map((item) => {
@@ -25,7 +25,7 @@ export function getPieOption(data: IPieData[]): EChartsOption {
       text: `充电桩总数`,
       top: '50%',
       left: '50%',
-      padding: [-20, 0, 0, -45],
+      padding: [-20, 0, 0, -100],
       textStyle: {
         fontSize: 19,
         color: 'white',

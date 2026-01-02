@@ -12,7 +12,7 @@ const option = computed<EChartsOption>(() => getPieOption(props.data))
 </script>
 
 <template>
-  <div class="screen-left-top w-full h-460px">
+  <div class="screen-left-top w-full h-438px">
     <div class="inner  w-full h-full">
       <BaseChart :option="option" />
     </div>
@@ -23,6 +23,5 @@ const option = computed<EChartsOption>(() => getPieOption(props.data))
 .screen-left-top {
   background: url('@/assets/images/bg_left-top.svg') no-repeat;
   background-size: cover;
-
 }
 </style>

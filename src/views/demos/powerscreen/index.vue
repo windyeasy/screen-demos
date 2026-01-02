@@ -1,31 +1,46 @@
 <script setup lang="ts">
 import useScreenScale from '@/composables/useScreenScale'
 import { getPowerScreenData } from '@/services/powerscreen'
-import { chargingPileData } from './config/home-data'
+import { chargingPileData, chargingStatisticsData, dataAnalysisData, processMonitoringData } from './config/home-data'
+import CenterBottom from './cpns/CenterBottom.vue'
+import CenterTop from './cpns/CenterTop.vue'
+import LeftBottom from './cpns/LeftBottom.vue'
 import LeftTop from './cpns/LeftTop.vue'
+import RightBottom from './cpns/RightBottom.vue'
+import RightCenter from './cpns/RightCenter.vue'
+import RightTop from './cpns/RightTop.vue'
 
 // todo: 可以配置title， cover，直接通过store得到demo的信息不需要每次都在home/data.ts里面写入
 useScreenScale()
 
-const pieData = ref<any>(chargingPileData)
-
+const chargingPile = ref<any>(chargingPileData)
+const processMonitoring = ref<any>(processMonitoringData)
+const chargingStatistics = ref<any>(chargingStatisticsData)
+const dataAnalysis = ref<any>(dataAnalysisData)
 getPowerScreenData().then((res) => {
-  pieData.value = res.chargingPile.data
+  chargingPile.value = res.chargingPile.data
+  processMonitoring.value = res.processMonitoring.data
+  chargingStatistics.value = res.chargingStatistics.data
+  dataAnalysis.value = res.dataAnalysis.data
 })
 </script>
 
 <template>
   <div class="wrapper flex flex-col">
     <header class="screen-header w-full h-56px" />
-    <main class="screen-main grid grid-cols-10 gap-4 flex-1  w-full">
-      <div class="screen-left col-span-3 pl-3">
-        <LeftTop :data="pieData" />
+    <main class="screen-main flex flex-1  w-full px-6 box-border">
+      <div class="screen-left w-526px">
+        <LeftTop :data="chargingPile" />
+        <LeftBottom :data="processMonitoring" />
       </div>
-      <div class="screen-center col-span-4 bg-pink">
-        center
+      <div class="screen-center flex-1  flex flex-col h-full box-border mx-4">
+        <CenterTop />
+        <CenterBottom :data="dataAnalysis" />
       </div>
-      <div class="screen-right col-span-3 bg-blue">
-        right
+      <div class="screen-right w509px">
+        <RightTop />
+        <RightCenter :data="chargingStatistics" />
+        <RightBottom />
       </div>
     </main>
   </div>

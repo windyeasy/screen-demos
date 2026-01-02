@@ -1,7 +1,7 @@
 export interface DemoInfo {
   title: string
   cover?: string
-  isAssetsImg?: boolean 
+  isAssetsImg?: boolean
   link: string
 }
 
@@ -11,8 +11,14 @@ export const demosInfo: DemosInfo = [
   {
     title: 'powerscreen',
     // cover: 'https://wallpaperm.cmcm.com/398f4912b45260cca24eb3ec9b37e711.jpg',
-    
+
     link: '/demos/powerscreen',
+  },
+    {
+    title: 'picscreen',
+    // cover: 'https://wallpaperm.cmcm.com/398f4912b45260cca24eb3ec9b37e711.jpg',
+
+    link: '/demos/picscreen',
   },
 
 ]
