@@ -1,9 +1,7 @@
 <script setup lang="ts">
-
-  const props = defineProps<{
-    data: any[]
-  }>()
-
+defineProps<{
+  data: any[]
+}>()
 </script>
 
 <template>
@@ -17,7 +15,7 @@
             </div>
             <div class="count mt-2 flex c-[#1e8fde] items-end">
               <div class="total-number  text-36px font-bold flex">
-               <Countup :value="item.totalNum" />
+                <Countup :value="item.totalNum" />
               </div>
               <div class="unit text-sm pb-1">
                 {{ item.unit }}
@@ -36,9 +34,11 @@
               </svg>
             </div>
             <div class="percentage pb-2 flex">
-              <Countup :value="item.percentage" :options="{
-                duration: 3
-              }" />
+              <Countup
+                :value="item.percentage" :options="{
+                  duration: 3,
+                }"
+              />
               <span class="unit">%</span>
             </div>
           </div>
