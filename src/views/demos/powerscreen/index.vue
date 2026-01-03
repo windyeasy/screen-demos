@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import useScreenScale from '@/composables/useScreenScale'
 import { getPowerScreenData } from '@/services/powerscreen'
 import { chargingPileData, chargingStatisticsData, dataAnalysisData, processMonitoringData } from './config/home-data'
 import CenterBottom from './cpns/CenterBottom.vue'
@@ -11,7 +10,6 @@ import RightCenter from './cpns/RightCenter.vue'
 import RightTop from './cpns/RightTop.vue'
 
 // todo: 可以配置title， cover，直接通过store得到demo的信息不需要每次都在home/data.ts里面写入
-useScreenScale()
 
 const chargingPile = ref<any>(chargingPileData)
 const processMonitoring = ref<any>(processMonitoringData)

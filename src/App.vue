@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import useScreenScale from './composables/useScreenScale';
+
+useScreenScale()
 
 </script>
 
