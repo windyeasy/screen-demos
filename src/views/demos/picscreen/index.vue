@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import useScreenScale from '@/composables/useScreenScale'
+import { areaRatioData, listedCompanies2Data, listedCompaniesData, registrationRateData, vacancyRateData } from './config/picscreen-data'
+import AreaRatio from './cpns/AreaRatio.vue'
+import ListedCompanies2 from './cpns/ListedCompanies2.vue'
+import ListedCompanies from './cpns/ListedCompanies.vue'
+import RegistrationRate from './cpns/RegistrationRate.vue'
+import VacanyRate from './cpns/VacanyRate.vue'
 
-useScreenScale()
+const vacancyRate = ref<any[]>(vacancyRateData)
+const listedCompanies = ref<any[]>(listedCompaniesData)
+const listedCompanies2 = ref<any[]>(listedCompanies2Data)
+const registrationRate = ref<any[]>(registrationRateData)
+const areaRatio = ref<any[]>(areaRatioData)
 </script>
 
 <template>
@@ -10,21 +19,21 @@ useScreenScale()
     <main class="screen-main flex flex-col  flex-1 mt-6 w-full px-6 box-border">
       <div class="main-top flex  w-full flex-1 ">
         <div class="main-top-left flex-1 h-full">
-          <ScreenPanel title="全市写字楼空置率分析" />
+          <VacanyRate :data="vacancyRate" />
         </div>
         <div class="main-top-center flex-1 h-full">
-          <ScreenPanel title="入住上市企业数量" />
+          <ListedCompanies :data="listedCompanies" />
         </div>
         <div class="main-top-right flex-1 h-full">
-          <ScreenPanel title="全市当地注册率" />
+          <RegistrationRate :data="registrationRate" />
         </div>
       </div>
       <div class="main-bottom flex  flex-1 mt-8 mb-10">
         <div class="main-bottom-left flex-1 h-full">
-          <ScreenPanel title="入驻世界500强企业数量" />
+          <ListedCompanies2 :data="listedCompanies2" />
         </div>
         <div class="main-bottom-right flex-1 h-full">
-          <ScreenPanel title="全市写字楼租售面积比" />
+          <AreaRatio :data="areaRatio" />
         </div>
       </div>
     </main>
