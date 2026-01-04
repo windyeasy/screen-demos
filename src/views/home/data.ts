@@ -19,4 +19,9 @@ export const demosInfo: DemosInfo = [
     cover: 'democovers/picscreen.png',
     link: '/demos/picscreen',
   },
+  {
+    title: 'enrollmentscreen',
+    // cover: 'democovers/picscreen.png',
+    link: '/demos/enrollmentscreen',
+  },
 ]

@@ -1,14 +1,4 @@
-/**
- * 通过范围随机整数
- * @param min 最小的整数
- * @param max 最大正数
- * @returns 随机数值
- */
-function getRandomInt(min: number, max: number): number {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+import {getRandomInt} from "@/utils/logic"
 
 // 全市写字楼空置率分析
 export const vacancyRateData = Array.from({ length: 6 }).map((_, index) => {
@@ -33,10 +23,6 @@ const cities = [
   '嘉定区',
 ]
 
-export function radomArrayItem(array: string[]): string {
-  const index = getRandomInt(0, array.length - 1)
-  return array[index]
-}
 
 const colors = [
   '#00E5FF', // 低
