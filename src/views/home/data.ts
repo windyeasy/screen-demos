@@ -14,11 +14,9 @@ export const demosInfo: DemosInfo = [
 
     link: '/demos/powerscreen',
   },
-    {
+  {
     title: 'picscreen',
-    // cover: 'https://wallpaperm.cmcm.com/398f4912b45260cca24eb3ec9b37e711.jpg',
-
+    cover: 'democovers/picscreen.png',
     link: '/demos/picscreen',
   },
-
 ]

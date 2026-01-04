@@ -16,9 +16,9 @@ function toPath(path: string) {
     </header>
     <main class="mt-20px flex flex-wrap justify-center">
       <template v-for="(item, index) in demosInfo" :key="index">
-        <div class="demo-item mb4 p2  w-300px box-border cursor-pointer" @click="toPath(item.link)">
+        <div class="demo-item mb4 p2  w-600px box-border cursor-pointer" @click="toPath(item.link)">
           <div class="demo-item-wrap shadow-lg rounded-lg overflow-hidden">
-            <div class="item-cover w-full h-240px">
+            <div class="item-cover w-full h-360px">
               <img class="item-cover-img w-100% h-100%" :src="loadImage(item.cover)" :alt="item.title">
             </div>
             <div class="item-title text-center font-bold lh-18 text-xl">

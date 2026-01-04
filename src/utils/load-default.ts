@@ -1,7 +1,11 @@
 export function loadImage(path: string = '') {
-  return path || loadAssetsImages('noimg.webp')
+  return path ? loadAssets(path) : loadAssetsImages('noimg.webp')
 }
 
+export function loadAssets(path: string) {
+  const absPath = `../assets/${path}`
+  return new URL(absPath, import.meta.url).href
+}
 export function loadAssetsImages(path: string) {
-  return new URL(`../assets/images/${path}`, import.meta.url).href
+  return loadAssets(`images/${path}`)
 }
