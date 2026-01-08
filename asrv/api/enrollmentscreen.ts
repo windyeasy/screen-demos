@@ -96,7 +96,7 @@ export default defineApiConfig({
         {
           'id|+1': 1,
           date() {
-            const number = this.id as any
+            const number = (this as any).id
             return `9-${number}`
           },
           'peopleNumber': '@integer(0, 700)',
@@ -109,7 +109,7 @@ export default defineApiConfig({
         {
           'id|+1': 1,
           date() {
-            const number = this.id as any
+            const number = (this as any).id
             return `07-${number + 4}`
           },
           'maleNumber': '@integer(0, 30)',
