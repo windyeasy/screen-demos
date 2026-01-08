@@ -1,8 +1,8 @@
 // asrv/api/post.ts
-import { defineApiConfig, mock, Mock } from 'asrv'
+import { defineApiConfig, mockString } from 'asrv'
 
 export default defineApiConfig({
-  powerscreen: JSON.stringify(mock({
+  powerscreen:mockString({
     chargingPile: {
       'data|6': [
         {
@@ -102,5 +102,5 @@ export default defineApiConfig({
       ],
       'totalPercentage': `@integer(0, 100)`,
     },
-  })),
+  }),
 })

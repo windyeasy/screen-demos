@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { IEnrollmentComparison, IMaleToFemaleRatio, IRegistrationStatistics, IReportComparison, IRoomOccupancyStatus, ITransactionStatus } from './config/types'
+import { getEnrollmentscreenData } from '@/services/enrollmentscreen'
 import { enrollmentComparisonData, maleToFemaleRatioData, registrationStatisticsData, reportComparisonData, roomOccupancyStatusData, transactionStatusData } from './config/data'
 import LeftBottom from './cpns/LeftBottom.vue'
 import RegistrationStatistics from './cpns/RegistrationStatistics.vue'
@@ -13,6 +14,15 @@ const enrollmentComparison = ref<IEnrollmentComparison[]>(enrollmentComparisonDa
 const roomOccupancyStatus = ref<IRoomOccupancyStatus>(roomOccupancyStatusData)
 const registrationStatistics = ref<IRegistrationStatistics[]>(registrationStatisticsData)
 const maleToFemaleRatio = ref<IMaleToFemaleRatio[]>(maleToFemaleRatioData)
+
+getEnrollmentscreenData().then((res) => {
+  transactionStatus.value = res.transactionStatus.data
+  reportComparison.value = res.reportComparison.data
+  enrollmentComparison.value = res.enrollmentComparison.data
+  roomOccupancyStatus.value = res.roomOccupancyStatus.data
+  registrationStatistics.value = res.registrationStatistics.data
+  maleToFemaleRatio.value = res.maleToFemaleRatio.data
+})
 </script>
 
 <template>

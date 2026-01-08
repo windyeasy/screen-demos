@@ -48,7 +48,6 @@ export const enrollmentComparisonData: IEnrollmentComparison[] = [
   {
     id: 2,
     name: '线上报名',
-
     color: '#fe8d00',
     pepleNumber: getRandomInt(0, 1000),
   },
