@@ -1,4 +1,4 @@
-import type { ISendAndReceiveInfo, ITaskUpdateInfo, ITodayInfo, IWarehouseReceivingAndDispatchRatio,  TodayWorkInfo } from './types'
+import type { ISendAndReceiveInfo, ITaskUpdateInfo, ITodayInfo, ITodayWorkInfo, IWarehouseRecAndDisRatio } from './types'
 import { getRandomInt } from '@/utils/logic'
 
 // 平台收发总量
@@ -43,19 +43,19 @@ export const taskUpdateInfoData: ITaskUpdateInfo = {
 }
 
 // 各仓库月收发占比
-export const warehouseReceivingAndDispatchRatio: IWarehouseReceivingAndDispatchRatio[] = months.map((item, index) => {
+export const warehouseRecAndDisRatioData: IWarehouseRecAndDisRatio[] = months.map((item, index) => {
   return {
-    id: index+1,
+    id: index + 1,
     month: item,
     total1: getRandomInt(0, 100),
     total2: getRandomInt(0, 100),
-    total3: getRandomInt(0, 100)
+    total3: getRandomInt(0, 100),
   }
 })
 
 // 各个仓库今日作业信息
-export const todayWorkInfo: TodayWorkInfo = {
+export const todayWorkInfoData: ITodayWorkInfo = {
   totalInventory: getRandomInt(0, 1000),
   todayReceivedAndShipped: getRandomInt(0, 1000),
-  todayWorkNumber: getRandomInt(0, 10000)
+  todayWorkNumber: getRandomInt(0, 10000),
 }

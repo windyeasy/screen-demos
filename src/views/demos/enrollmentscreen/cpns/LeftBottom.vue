@@ -17,8 +17,8 @@ function getOption1(data: IEnrollmentComparison[]): EChartsOption {
       width: 100,
       left: 'left',
       itemGap: 10,
-      itemWidth: 16,
-      itemHeight: 16,
+      itemWidth: 10,
+      itemHeight: 10,
       textStyle: {
         color: '#fff',
       },

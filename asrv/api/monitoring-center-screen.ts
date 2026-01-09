@@ -59,21 +59,22 @@ export default defineApiConfig({
         'todayOutboundInfo': getTodayInfo(),
         'inboundAndOutboundInfos|5-10': [
           {
-            type: `@pick([1, 2])`,
-            date: `@datetime("yyyy-MM-dd HH:mm:ss")`,
-            storehouse: `@pick(['大理宝象', '大理粮油', '王家营'])库`,
-            shippingCompany: `@cname有限公司`,
-            orderNumber: 'FH@date("yyyyMMdd")@natural(1000, 9999)',
-            licensePlateNumber: getLicensePlateNumber(),
-            materialTypeNumber: `@pick(['建材', '板材', '钢材', '卷材', '粮油])`,
-            weight: '@float(0, 200, 3, 3)',
+            'id|+1': 1,
+            'type': `@pick([1, 2])`,
+            'date': `@datetime("yyyy-MM-dd HH:mm:ss")`,
+            'storehouse': `@pick(大理宝象, 大理粮油, 王家营)库`,
+            'shippingCompany': `@ctitle 有限公司`,
+            'orderNumber': 'FH20260109@natural(1000, 9999)',
+            'licensePlateNumber': getLicensePlateNumber(),
+            'materialTypeName': `@pick(建材, 板材, 钢材, 卷材, 粮油)`,
+            'weight': '@float(0, 200, 3, 3)',
           },
         ],
       },
     },
 
     // 各仓库月收发占比
-    warehouseReceivingAndDispatchRatio: {
+    warehouseRecAndDisRatio: {
       'data|12': [
         {
           'id|+1': 1,

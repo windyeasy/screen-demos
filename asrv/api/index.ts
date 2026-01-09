@@ -1,5 +1,6 @@
 import { defineApiConfig } from 'asrv'
 import enrollmentscreen from './enrollmentscreen'
+import monitoringCenterScreenApi from './monitoring-center-screen'
 import powerscreenApi from './powerscreen'
 
 export default defineApiConfig({
@@ -7,5 +8,6 @@ export default defineApiConfig({
   api: {
     ...powerscreenApi,
     ...enrollmentscreen,
+    ...monitoringCenterScreenApi,
   },
 })

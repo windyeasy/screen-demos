@@ -25,6 +25,7 @@ export interface ITodayInfo {
 }
 
 export interface InboundAndOutboundInfo {
+  id: IDType
   type: 1 | 2 // 1 - 入，2-出
   date: string | number
   // 仓库
@@ -36,7 +37,7 @@ export interface InboundAndOutboundInfo {
   // 车牌号
   licensePlateNumber: string
   // 物资类型名称
-  materialTypeNumber: string
+  materialTypeName: string
   // 重量
   weight: number
 }
@@ -52,7 +53,7 @@ export interface ITaskUpdateInfo {
 }
 
 // 各仓库月收发占比
-export interface IWarehouseReceivingAndDispatchRatio {
+export interface IWarehouseRecAndDisRatio {
   id: IDType
   month: number | string
   // 大理宝象库数量
@@ -64,7 +65,7 @@ export interface IWarehouseReceivingAndDispatchRatio {
 }
 
 // 各个仓库今日作业信息
-export interface TodayWorkInfo {
+export interface ITodayWorkInfo {
   // 今日库存量
   totalInventory: number
   // 今日收发量
