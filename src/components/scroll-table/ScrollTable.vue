@@ -145,8 +145,10 @@ onUnmounted(() => {
     position: relative;
   }
 table, thead, tbody, tr, td {
-  border: none;
+  border: 0;
   outline: none;
+  border-collapse: collapse;  /* 合并边框 */
+  border-spacing: 0;
 }
 tr {
   display: table;
