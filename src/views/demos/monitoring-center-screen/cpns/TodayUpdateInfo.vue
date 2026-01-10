@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ITaskUpdateInfo } from '../config/types'
 import type { ScrollTableColumnProps } from '@/components/scroll-table/types'
+import { BorderBox1 } from '@kjgl77/datav-vue3'
 
 defineProps<{
   data: ITaskUpdateInfo
@@ -61,10 +62,12 @@ const columns: ScrollTableColumnProps[] = [
 </script>
 
 <template>
-  <ScreenPanel3 title="实时作业动态">
-    <div class="inner grid  grid-cols-9  h-full box-border overflow-hidden">
-      <div class="col-span-3 mt-6 flex">
-        <TaskCard
+  <BorderBox1>
+    <div class="inner grid p6  grid-cols-9  h-full box-border overflow-hidden">
+      <div class="col-span-3">
+        <ScreenPanelTitle title="实时作业动态" />
+        <div class="card-list flex mt-6">
+           <TaskCard
           icon="i-carbon-bottom-panel-open"
           title="出库量-今日出库总量"
           :total="data.todayInboundInfo.total"
@@ -81,13 +84,14 @@ const columns: ScrollTableColumnProps[] = [
           color="#02c7fc"
           sub-title2="待入库"
         />
+        </div>
       </div>
       <div class="col-span-6 h-full box-border">
         <ScrollTable
           :data="data.inboundAndOutboundInfos"
           :columns="columns"
           stripe
-          height="232px"
+          height="250px"
           class="text-[#8389a4]"
           head-background-color="#0a1438"
         >
@@ -112,5 +116,5 @@ const columns: ScrollTableColumnProps[] = [
         </ScrollTable>
       </div>
     </div>
-  </ScreenPanel3>
+  </BorderBox1>
 </template>
