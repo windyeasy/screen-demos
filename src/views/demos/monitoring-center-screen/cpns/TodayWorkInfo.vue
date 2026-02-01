@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="w-full h-full">
+  <div class="w-full h-full flex flex-col">
     <div class="top flex mt-6">
       <div class="inner-item flex-1 flex justify-center">
         <CountcardV2 title="今日库存量(万吨)" :count="data.totalInventory">
@@ -24,6 +24,9 @@ defineProps<{
           <img src="@/assets/images/work-icon3.png" class="w-full h-full">
         </CountcardV2>
       </div>
+    </div>
+    <div class="bottom flex-1 w-full">
+      <MapEchart />
     </div>
   </div>
 </template>

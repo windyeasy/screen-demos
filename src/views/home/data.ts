@@ -25,7 +25,8 @@ export const demosInfo: DemosInfo = [
   },
   {
     title: 'monitoring-center-screen',
-    // cover: 'democovers/picscreen.png',
+    cover: 'democovers/demo4.png',
     link: '/demos/monitoring-center-screen',
   },
 ]
+  

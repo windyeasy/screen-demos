@@ -51,5 +51,6 @@
   "cSpell.words": [
     "nocheck",
     "unocss"
-  ]
+  ],
+  "cSpell.files": ["!data/*.json"]
 }
