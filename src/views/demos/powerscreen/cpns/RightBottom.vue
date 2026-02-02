@@ -132,6 +132,7 @@ defineProps<{
 .hy-cls-1 {
   opacity: 0.8;
   stroke: url("#hy-linear-gradient");
+  will-change: opacity;
 }
 
 .hy-cls-2 {
@@ -145,9 +146,11 @@ defineProps<{
 
 .hy-cls-3 {
   filter: url("#hy-filter");
+  will-change: opacity;
 }
 
 .hy-cls-4 {
   filter: url("#hy-filter-2");
+  will-change: opacity;
 }
 </style>

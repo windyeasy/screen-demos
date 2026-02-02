@@ -58,7 +58,9 @@ getPowerScreenData().then((res) => {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: url('@/assets/images/bg.png') no-repeat;
+  background-color: #0d1254;
+  background-image: url('@/assets/images/bg.png');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 

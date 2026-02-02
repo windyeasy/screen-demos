@@ -1,5 +1,31 @@
 <script setup lang="ts">
+import gsap from 'gsap'
 
+onMounted(() => {
+  gsap.fromTo('#dongxiao', {
+    scale: 0.6,
+    opacity: 0.4,
+    y: 40,
+  }, {
+    scale: 1,
+    opacity: 1,
+    y: 0,
+    duration: 1,
+  })
+
+  gsap.fromTo('#center', {
+    scale: 0.6,
+    opacity: 0.4,
+    transformOrigin: 'bottom',
+    y: 30,
+  }, {
+    scale: 1,
+    opacity: 1,
+    transformOrigin: 'bottom',
+    y: 0,
+    duration: 1,
+  })
+})
 </script>
 
 <template>
@@ -1616,11 +1642,13 @@
   fill: #fff;
   opacity: 0.9;
   filter: url("#blue-filter-2");
+  will-change: opacity;
 }
 .cur-cls-orange {
   fill: #fff;
   opacity: 0.9;
   filter: url("#orange-filter-2");
+  will-change: opacity;
 }
 
 /* 图标动画 */

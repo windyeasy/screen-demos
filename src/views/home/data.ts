@@ -10,7 +10,7 @@ export type DemosInfo = DemoInfo[]
 export const demosInfo: DemosInfo = [
   {
     title: 'powerscreen',
-    // cover: 'https://wallpaperm.cmcm.com/398f4912b45260cca24eb3ec9b37e711.jpg',
+    cover: 'democovers/powerscreen.png',
     link: '/demos/powerscreen',
   },
   {
@@ -29,4 +29,3 @@ export const demosInfo: DemosInfo = [
     link: '/demos/monitoring-center-screen',
   },
 ]
-  
