@@ -4,6 +4,6 @@
 
 <template>
   <div class="screen-center-top w-full flex-1">
-    center-top
+    <CenterSvg />
   </div>
 </template>

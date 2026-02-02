@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getPowerScreenData } from '@/services/powerscreen'
-import { chargingPileData, chargingStatisticsData, dataAnalysisData, processMonitoringData } from './config/home-data'
+import { chargingPileData, chargingStatisticsData, chargingTop4Data, dataAnalysisData, exceptionMonitoringData, processMonitoringData } from './config/home-data'
 import CenterBottom from './cpns/CenterBottom.vue'
 import CenterTop from './cpns/CenterTop.vue'
 import LeftBottom from './cpns/LeftBottom.vue'
@@ -15,11 +15,19 @@ const chargingPile = ref<any>(chargingPileData)
 const processMonitoring = ref<any>(processMonitoringData)
 const chargingStatistics = ref<any>(chargingStatisticsData)
 const dataAnalysis = ref<any>(dataAnalysisData)
+const chargingTop4 = ref(chargingTop4Data)
+const exceptionMonitoring = ref(exceptionMonitoringData)
+const percentage = ref(0)
+
 getPowerScreenData().then((res) => {
   chargingPile.value = res.chargingPile.data
   processMonitoring.value = res.processMonitoring.data
   chargingStatistics.value = res.chargingStatistics.data
   dataAnalysis.value = res.dataAnalysis.data
+  exceptionMonitoring.value = res.exceptionMonitoring.data
+
+  chargingTop4.value = res.chargingTop4.data
+  percentage.value = res.chargingTop4.totalPercentage
 })
 </script>
 
@@ -36,9 +44,9 @@ getPowerScreenData().then((res) => {
         <CenterBottom :data="dataAnalysis" />
       </div>
       <div class="screen-right w509px">
-        <RightTop />
+        <RightTop :panel-items="chargingTop4" :percentage="percentage" />
         <RightCenter :data="chargingStatistics" />
-        <RightBottom />
+        <RightBottom :move-points="exceptionMonitoring" />
       </div>
     </main>
   </div>
