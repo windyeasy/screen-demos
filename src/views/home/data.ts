@@ -20,7 +20,7 @@ export const demosInfo: DemosInfo = [
   },
   {
     title: 'enrollmentscreen',
-    // cover: 'democovers/picscreen.png',
+    cover: 'democovers/demo3.png',
     link: '/demos/enrollmentscreen',
   },
   {

@@ -113,7 +113,7 @@ div, svg, path {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 64px;
+  font-size: 2em;
 }
 .water-ball-box .water {
   position: absolute;
