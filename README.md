@@ -4,6 +4,10 @@
 
 使用 [asrv](https://windyeasy.github.io/asrv/) 进行接口的模拟
 
+## demo
+
+![](./docs-assets/demo.png)
+
 ## 运行项目
 
 使用node 16.0及以上的版本
